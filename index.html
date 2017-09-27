@@ -10,7 +10,7 @@
 		<form id="gerar_carteirinhas" class="form-horizontal">
 			<fieldset>
 
-			<!-- NOME DO FORMULÁRIO -->
+			<!-- NOME DO FORMUL�RIO -->
 			<legend>Gerador de Carteirinhas</legend>
 
 			<!-- NOME-->
@@ -37,7 +37,7 @@
 				</div>
 			</div>
 
-			<!-- BOTÃO -->
+			<!-- BOT�O -->
 			<div class="form-group">
 				<label class="col-md-4 control-label"></label>
 				<div class="col-md-4">
@@ -62,25 +62,27 @@ $(function() {
 		var nome = $('#nome').val(); 
 		var cargo = $('#nome_cargo').val(); 
 		var id = $('#id').val();
-
 		//var doc = new jsPDF();
 		var doc = new jsPDF('l', 'mm', [90, 50]);
 
+
 		doc.setFontSize(11);
-		doc.text(nome, 5, 31);
-		doc.setLineWidth(0.5);
-		doc.line(5, 33, 80, 33);
-		doc.text(cargo, 5, 37); 
-		doc.text(id, 73, 37);
+		doc.text(nome, 5, 41);
+
+		//doc.setLineWidth(0.5);
+		//doc.line(5, 43, 80, 43);
+
+		doc.setFontSize(9);
+		doc.text(cargo, 5, 47); 
+		doc.text(id, 60, 47);
 		
 		doc.save(nome+'.pdf');
 		
     });
 });
 /*
-
-*/// NÃO ESQUECER
-// - CRIAR FUNÇÃO PARA ALINHA O TEXTO
+*/// N�O ESQUECER
+// - CRIAR FUN��O PARA ALINHA O TEXTO
 // - ARRUMAR AS BASES DOS CERTIFICADOS
 </script>
 </html>
